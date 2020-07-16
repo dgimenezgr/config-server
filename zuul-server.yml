@@ -1,0 +1,50 @@
+server:
+  port: 8080 #the default port used for zuul service
+#  ssl:
+#    key-store-type : PKCS12 # The format used for the keystore 
+#    key-store: classpath:keystore/keystore.p12 # The path to the keystore containing the certificate
+#    key-store-password: toor_Dreamgenics # The password used to generate the certificate
+#    key-alias: tomcat # The alias mapped to the certificate
+    
+#security:
+#  require-ssl: true #Since we are using Spring Security enabled application, let's configure it to accept only HTTPS requests
+
+zuul:
+  # Pass Authorization header downstream
+  sensitiveHeaders: Cookie,Set-Cookie
+  routes:
+    client:
+      serviceId: MICROSERVICE-CLIENT
+    jpa:
+      serviceId: MICROSERVICE-HIBERNATE
+    mybatis:
+      serviceId: MICROSERVICE-MYBATIS
+    web-app:
+      serviceId: WEB-APP
+    projectmanagement:
+      serviceId: MICROSERVICE-PROJECTMANAGEMENT
+    recurrence:
+      serviceId: RECURRENCE-MICROSERVICE      
+hystrix:
+    command:
+        default:
+            execution:
+                timeout:
+                    enabled: false
+                    
+                    
+ribbon: 
+  ReadTimeout: 10000
+      
+    
+app:
+  serviceurl: http://localhost:8080/login/cas
+  serviceticketvalidator: https://sso.dreamgenics.com/cas
+  serviceauthenticationentrypoint: https://sso.dreamgenics.com/cas/login
+  
+# Spring properties
+spring:
+  application:
+    name: zuul
+      
+

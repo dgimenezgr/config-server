@@ -1,0 +1,11 @@
+# HTTP Server
+server:  
+  port: 3334   # HTTP port
+
+# Spring properties
+spring:  
+  application:
+    name: microservice-mybatis
+
+mybatis:
+ config-location: classpath:mybatis-config.xml

@@ -1,0 +1,10 @@
+# HTTP Server
+server:  
+  port: 3340   # HTTP port
+
+# Spring properties
+spring:  
+  application:
+    name: microservice-client
+  
+  

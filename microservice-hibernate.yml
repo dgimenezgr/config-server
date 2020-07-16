@@ -1,0 +1,13 @@
+# HTTP Server
+server:  
+  port: 3335   # HTTP port
+
+# Spring properties
+spring:  
+  application:
+    name: microservice-hibernate
+  jpa:
+      properties:
+          hibernate:
+              dialect: org.hibernate.dialect.MySQL5Dialect
+              
