@@ -24,7 +24,9 @@ zuul:
     projectmanagement:
       serviceId: MICROSERVICE-PROJECTMANAGEMENT
     recurrence:
-      serviceId: RECURRENCE-MICROSERVICE      
+      serviceId: RECURRENCE-MICROSERVICE
+    viewcomponents:
+      serviceId: MICROSERVICE-VIEWCOMPONENTS
 hystrix:
     command:
         default:
