@@ -10,3 +10,8 @@ logging:
   file: logs/${spring.application.name}.log
   level:
     org.springframework.cloud: 'DEBUG'
+
+config:
+  jobs:
+    folder:
+      absolutepath: E:\dreamgenics\dreampipe\jobs
