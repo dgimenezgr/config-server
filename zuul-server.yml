@@ -21,10 +21,10 @@ zuul:
       serviceId: MICROSERVICE-MYBATIS
     web-app:
       serviceId: WEB-APP
-    projectmanagement:
-      serviceId: MICROSERVICE-PROJECTMANAGEMENT
-    recurrence:
-      serviceId: RECURRENCE-MICROSERVICE      
+    dreampipe-jobs:
+      serviceId: DREAMPIPE-JOBS
+    dreampipe-job-index:
+      serviceId: DREAMPIPE-JOB-INDEX
 hystrix:
     command:
         default:
@@ -32,10 +32,8 @@ hystrix:
                 timeout:
                     enabled: false
                     
-                    
 ribbon: 
   ReadTimeout: 10000
-      
     
 app:
   serviceurl: http://localhost:8080/login/cas
