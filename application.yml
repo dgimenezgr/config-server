@@ -1,4 +1,3 @@
-
 spring:  
   datasource:
       url:  jdbc:postgresql://192.168.6.121:5432/dev
@@ -10,8 +9,13 @@ logging:
   file: logs/${spring.application.name}.log
   level:
     org.springframework.cloud: 'DEBUG'
-
-config:
-  jobs:
-    folder:
-      absolutepath: E:\dreamgenics\dreampipe\jobs
+    
+serverid: LOCALHOST
+showalltasks: true
+snapshotallowed: true
+usehotandcold: true
+folders:
+  rootpath: /dreamgenics/dreampipe
+  homepath: /dreamgenics/dreampipe/jobs
+  coldpath: /dreamgenics/dreampipe/jobs_cold
+    

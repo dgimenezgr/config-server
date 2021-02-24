@@ -1,0 +1,84 @@
+spring:  
+  datasource:
+      url:  jdbc:postgresql://192.168.6.121:5432/dev
+      username: "{cipher}d30700b168278385d7f525291a05b7d1db8307bebb63b90484fcf334f28ce92d"
+      password: "{cipher}5ca273623c13e8d176907c698e529d282b61ed2267e96cce65ffc63305a49d70"
+      class: com.mysql.jdbc.Driver
+      
+logging:  
+  file: logs/${spring.application.name}.log
+  level:
+    org.springframework.cloud: 'DEBUG'
+
+config:
+  serverId: LOCALHOST
+  showAllTasks: true
+  snapshotAllowed: true
+  usehotandcold:
+  folders:
+      homepath:
+      jobscoldpath:
+      jobsabsolutepath: E:\dreamgenics\dreampipe\jobs
+
+endpoints:
+- id: casServer
+  host: dgsso01.dreamgenics.local
+  port: 9998
+- id: webmanager-casService
+  host: localhost
+  port: 8080
+- id: webmanager
+  host: localhost
+  port: 8080
+- id: easy-casService
+  host: localhost
+  port: 8092
+- id: easy
+  host: localhost
+  port: 8092
+- id: reports-casService
+  host: localhost
+  port: 8090
+- id: reports
+  host: localhost
+  port: 8090
+- id: reportsManagement
+  host: localhost
+  port: 8091
+- id: tasks
+  host: pre01.dreamgenics.local
+  port: 3082
+- id: fileChooser
+  host: pre01.dreamgenics.local
+  port: 3083
+- id: jobs
+  host: pre01.dreamgenics.local
+  port: 3084
+- id: jobIndex
+  host: pre01.dreamgenics.local
+  port: 3085
+- id: dbIndex
+  host: pre01.dreamgenics.local
+  port: 3088
+- id: runtime
+  host: pre01.dreamgenics.local
+  port: 3086
+- id: webmanagerService
+  host: pre01.dreamgenics.local
+  port: 3087
+- id: authorities
+  host: pre01.dreamgenics.local
+  port: 8089
+- id: runtimeWskt
+  host: pre01.dreamgenics.local
+  port: 8086
+- id: jbrowse
+  host: pre01.dreamgenics.local
+  port: 80
+    
+email:
+  smtp: smtp.host
+  smtpPort: 25
+  user: user
+  password: pass
+  ssl: false
