@@ -10,6 +10,13 @@ logging:
   level:
     org.springframework.cloud: 'DEBUG'
 
+email:
+  smtp: smtp.host
+  smtpPort: 25
+  user: user
+  password: pass
+  ssl: false
+
 serverid: LOCALHOST
 showalltasks: true
 snapshotallowed: true
@@ -18,10 +25,4 @@ folders:
   rootpath: E:/dreamgenics/dreampipe
   homepath: E:/dreamgenics/dreampipe/jobs
   coldpath: E:/dreamgenics/dreampipe/jobs_cold
- 
-email:
-  smtp: smtp.host
-  smtpPort: 25
-  user: user
-  password: pass
-  ssl: false
+  pipepath: E:/dreamgenics/dreampipe/lib

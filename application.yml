@@ -18,4 +18,5 @@ folders:
   rootpath: /dreamgenics/dreampipe
   homepath: /dreamgenics/dreampipe/jobs
   coldpath: /dreamgenics/dreampipe/jobs_cold
+  pipepath: /dreamgenics/dreampipe/lib
     
