@@ -26,3 +26,4 @@ folders:
   homepath: E:/dreamgenics/dreampipe/jobs
   coldpath: E:/dreamgenics/dreampipe/jobs_cold
   pipepath: E:/dreamgenics/dreampipe/lib
+  taskTempPathSuffix: taskLoaderTempFolder

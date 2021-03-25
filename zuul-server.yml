@@ -25,6 +25,7 @@ zuul:
       serviceId: DREAMPIPE-JOBS
     dreampipe-job-index:
       serviceId: DREAMPIPE-JOB-INDEX
+      
 hystrix:
     command:
         default:
