@@ -1,5 +1,17 @@
+# Spring properties
+spring:
+  application:
+    name: zuul
+  datasource:
+    url:  jdbc:postgresql://192.168.6.121:5432/users
+    username: "{cipher}d30700b168278385d7f525291a05b7d1db8307bebb63b90484fcf334f28ce92d"
+    password: "{cipher}5ca273623c13e8d176907c698e529d282b61ed2267e96cce65ffc63305a49d70"
+    class: com.mysql.jdbc.Driver
+      
+
+# the default port used for zuul service
 server:
-  port: 9080 #the default port used for zuul service
+  port: 9080 
 #  ssl:
 #    key-store-type : PKCS12 # The format used for the keystore 
 #    key-store: classpath:keystore/keystore.p12 # The path to the keystore containing the certificate
@@ -8,13 +20,6 @@ server:
     
 #security:
 #  require-ssl: true #Since we are using Spring Security enabled application, let's configure it to accept only HTTPS requests
-
-spring:  
-  datasource:
-      url:  jdbc:postgresql://192.168.6.121:5432/users
-      username: "{cipher}d30700b168278385d7f525291a05b7d1db8307bebb63b90484fcf334f28ce92d"
-      password: "{cipher}5ca273623c13e8d176907c698e529d282b61ed2267e96cce65ffc63305a49d70"
-      class: com.mysql.jdbc.Driver
 
 zuul:
   # Pass Authorization header downstream
@@ -49,10 +54,3 @@ app:
   serviceurl: http://localhost:8080/login/cas
   serviceticketvalidator: https://sso.dreamgenics.com/cas
   serviceauthenticationentrypoint: https://sso.dreamgenics.com/cas/login
-  
-# Spring properties
-spring:
-  application:
-    name: zuul
-      
-
