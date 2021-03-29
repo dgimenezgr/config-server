@@ -4,17 +4,6 @@ server:
 
 # Eureka not registry in other eureka server
 eureka:
-  instance:
-    leaseRenewalIntervalInSeconds: 10  # Included for admin
-    instanceId : client-${random.uuid} # Needed to run multiple instances on the same host
   client:
     registerWithEureka: false 
-    serviceUrl:
-      defaultZone: http://localhost:${server.port}/eureka  # Default eureka zone
-    # fetchRegistry: false # Removed for admin server
-
-# Distinct context for admin panel
-spring:
-  boot:
-   admin:
-     context-path: /admin 
+    fetchRegistry: false

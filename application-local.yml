@@ -27,22 +27,3 @@ folders:
   coldpath: E:/dreamgenics/dreampipe/jobs_cold
   pipepath: E:/dreamgenics/dreampipe/lib
   taskTempPathSuffix: taskLoaderTempFolder
-  
-# admin panel
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  endpoint:
-    health:
-      show-details: ALWAYS
-
-eureka:
-  instance:
-    hostname: localhost
-    health-check-url-path: /actuator/health
-    status-page-url-path: /actuator/info
-  client:
-    serviceUrl:
-      defaultZone: http://127.0.0.1:8761/eureka/
