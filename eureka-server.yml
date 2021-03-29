@@ -1,9 +1,19 @@
 # HTTP Server
 server:  
-  port: 8761   # HTTP port
+  port: 8761
 
-#eureka not registry in other eureka server
-eureka:  
+# Eureka not registry in other eureka server
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10  # Included for admin
   client:
-    register-with-eureka: false
-    fetch-registry: false
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://localhost:#{server.port}/eureka  # Default eureka zone
+
+# Distinct context for admin panel
+spring:
+  boot:
+   admin:
+     context-path: /admin 
