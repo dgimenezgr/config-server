@@ -10,7 +10,7 @@ eureka:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://localhost:#{server.port}/eureka  # Default eureka zone
+      defaultZone: http://localhost:${server.port}/eureka  # Default eureka zone
 
 # Distinct context for admin panel
 spring:
