@@ -29,3 +29,5 @@ folders:
   datapath: E:/dreamgenics/data   
   taskTempPathSuffix: taskLoaderTempFolder
   relativeParentPaths: ../input,../param,.
+filechooser:
+  filterbyusergroups: true
