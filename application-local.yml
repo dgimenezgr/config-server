@@ -27,7 +27,7 @@ folders:
   coldpath: E:/dreamgenics/dreampipe/jobs_cold
   pipepath: E:/dreamgenics/dreampipe/lib
   datapath: E:/dreamgenics/data   
-  taskTempPathSuffix: taskLoaderTempFolder
-  relativeParentPaths: ../input,../param,.
+  tasktemppathsuffix: taskLoaderTempFolder
+  relativeparentpaths: ../input,../param,.
 filechooser:
   filterbyusergroups: true
