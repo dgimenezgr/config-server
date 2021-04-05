@@ -33,12 +33,15 @@ zuul:
       serviceId: MICROSERVICE-MYBATIS
     web-app:
       serviceId: WEB-APP
+    authorities:
+      serviceId: AUTHORITIES
     dreampipe-jobs:
       serviceId: DREAMPIPE-JOBS
     dreampipe-job-index:
       serviceId: DREAMPIPE-JOB-INDEX
     dreampipe-tasks:
       serviceId: DREAMPIPE-TASKS
+    
       
 hystrix:
     command:
