@@ -8,7 +8,6 @@ spring:
     password: "{cipher}5ca273623c13e8d176907c698e529d282b61ed2267e96cce65ffc63305a49d70"
     class: com.mysql.jdbc.Driver
       
-
 # the default port used for zuul service
 server:
   port: 9080 
@@ -41,8 +40,7 @@ zuul:
       serviceId: DREAMPIPE-JOB-INDEX
     dreampipe-tasks:
       serviceId: DREAMPIPE-TASKS
-    
-      
+          
 hystrix:
     command:
         default:
