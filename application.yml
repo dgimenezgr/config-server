@@ -9,7 +9,10 @@ logging:
   file: logs/${spring.application.name}.log
   level:
     org.springframework.cloud: 'DEBUG'
-    
+
+address:
+  zuul: http://localhost:9080/
+
 serverid: LOCALHOST
 showalltasks: true
 snapshotallowed: true

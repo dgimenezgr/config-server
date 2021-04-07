@@ -17,6 +17,9 @@ email:
   password: pass
   ssl: false
 
+address:
+  zuul: http://localhost:9080/
+
 serverid: LOCALHOST
 showalltasks: true
 snapshotallowed: true
