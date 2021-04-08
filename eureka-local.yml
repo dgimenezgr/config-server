@@ -15,4 +15,4 @@ management:
   endpoints:
     web:
       exposure:
-        include:*  # Expose all actuator endpoints
+        include: "*"  # Expose all actuator endpoints
