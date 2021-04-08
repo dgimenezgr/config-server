@@ -30,7 +30,12 @@ zuul:
     project-management:
       serviceId: PROJECT-MANAGEMENT
       path: /project-management/**
-          
+
+# Lets zuuls ribbon get eureka's WS list
+eureka:
+    client:
+        fetchRegistry: true
+        
 hystrix:
     command:
         default:
