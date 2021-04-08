@@ -7,7 +7,7 @@ spring:
     username: "{cipher}d30700b168278385d7f525291a05b7d1db8307bebb63b90484fcf334f28ce92d"
     password: "{cipher}5ca273623c13e8d176907c698e529d282b61ed2267e96cce65ffc63305a49d70"
     class: com.mysql.jdbc.Driver
-
+      
 # the default port used for zuul service
 server:
   port: 9080 
@@ -20,68 +20,38 @@ server:
 #security:
 #  require-ssl: true #Since we are using Spring Security enabled application, let's configure it to accept only HTTPS requests
 
-eureka:
-  client:
-    enabled: true
-ribbon:
-  ReadTimeout: 10000
-  eureka:
-    enabled: false
-
 zuul:
   # Pass Authorization header downstream
   sensitiveHeaders: Cookie,Set-Cookie
-  ignored-services: "*"
-  retryable: true
-  ribbon-isolation-strategy: thread
   routes:
-    retryable: true
-    authorities:
-      serviceId: authorities
-      path: /authorities/**
-      stripPrefix: false
-      retryable: true
+    client:
+      serviceId: MICROSERVICE-CLIENT
+    jpa:
+      serviceId: MICROSERVICE-HIBERNATE
+    mybatis:
+      serviceId: MICROSERVICE-MYBATIS
     web-app:
-      serviceId: web-app
-    dreampipe-jobs:
-      serviceId: dreampipe-jobs
-    dreampipe-job-index:
-      serviceId: dreampipe-job-index
-    dreampipe-tasks:
-      serviceId: dreampipe-tasks
-       
- authorities:
-   ribbon:
-      listOfServers: localhost:3340
-      eureka:
-        enabled: false
-      ServerListRefreshInterval: 100
-      retryableStatusCodes: 500
-      MaxAutoRetries: 0
-      MaxAutoRetriesNextServer: 1
-      OkToRetryOnAllOperations: true
-      ReadTimeout: 10000
-      ConnectTimeout: 10000
-      EnablePrimeConnections: true
-       
-hystrix:
-  command:
+      serviceId: WEB-APP
     authorities:
-      execution:
-        timeout:
-          enabled: false
-        isolation:
-          thread:
-            timeoutInMilliseconds: 60000
+      serviceId: AUTHORITIES
+    dreampipe-jobs:
+      serviceId: DREAMPIPE-JOBS
+    dreampipe-job-index:
+      serviceId: DREAMPIPE-JOB-INDEX
+    dreampipe-tasks:
+      serviceId: DREAMPIPE-TASKS
+          
+hystrix:
+    command:
+        default:
+            execution:
+                timeout:
+                    enabled: false
                     
+ribbon: 
+  ReadTimeout: 10000
+    
 app:
   serviceurl: http://localhost:8080/login/cas
   serviceticketvalidator: https://sso.dreamgenics.com/cas
   serviceauthenticationentrypoint: https://sso.dreamgenics.com/cas/login
-  
-# Expose endpoints into /actuator/routes
-management:
-  endpoints:
-    web:
-      exposure:
-        include: *
