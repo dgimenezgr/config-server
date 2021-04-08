@@ -25,10 +25,10 @@ zuul:
   sensitiveHeaders: Cookie,Set-Cookie
   routes:
     authorities:
-      serviceId: authorities
+      serviceId: AUTHORITIES
       path: /authorities/**
     project-management:
-      serviceId: project-management
+      serviceId: PROJECT-MANAGEMENT
       path: /project-management/**
           
 hystrix:
@@ -51,7 +51,6 @@ authorities:
 project-management:
   ribbon:
     listOfServers: http://localhost:8040
-
     
 app:
   serviceurl: http://localhost:8080/login/cas
