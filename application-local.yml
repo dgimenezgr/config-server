@@ -17,6 +17,11 @@ management:
       exposure:
         include: "*"
 
+# Obtain registry from eureka
+eureka:
+  client:
+    fetchRegistry: true        
+
 # GENOMEONE ENVS
 address:
   zuul: http://localhost:9080/
