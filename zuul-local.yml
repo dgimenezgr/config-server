@@ -24,22 +24,12 @@ zuul:
   # Pass Authorization header downstream
   sensitiveHeaders: Cookie,Set-Cookie
   routes:
-    client:
-      serviceId: MICROSERVICE-CLIENT
-    jpa:
-      serviceId: MICROSERVICE-HIBERNATE
-    mybatis:
-      serviceId: MICROSERVICE-MYBATIS
-    web-app:
-      serviceId: WEB-APP
     authorities:
-      serviceId: AUTHORITIES
-    dreampipe-jobs:
-      serviceId: DREAMPIPE-JOBS
-    dreampipe-job-index:
-      serviceId: DREAMPIPE-JOB-INDEX
-    dreampipe-tasks:
-      serviceId: DREAMPIPE-TASKS
+      serviceId: authorities
+      path: /authorities/**
+    project-management:
+      serviceId: project-management
+      path: /project-management/**
           
 hystrix:
     command:
@@ -48,8 +38,20 @@ hystrix:
                 timeout:
                     enabled: false
                     
+# Eureka interface with Ribbon must be disabled so Ribbon will use the list of servers indicated below
 ribbon: 
   ReadTimeout: 10000
+  eureka:
+    enabled: false
+
+# Above is the list of servers and ports where the different instances of the service is deployed, so Ribbon can use them for load balancing
+authorities:
+  ribbon:
+    listOfServers: http://localhost:3340
+project-management:
+  ribbon:
+    listOfServers: http://localhost:8040
+
     
 app:
   serviceurl: http://localhost:8080/login/cas
