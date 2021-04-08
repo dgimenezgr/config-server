@@ -10,15 +10,23 @@ logging:
   level:
     org.springframework.cloud: 'DEBUG'
 
+# Expose all actuator endpoints
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+# GENOMEONE ENVS
+address:
+  zuul: http://localhost:9080/
+
 email:
   smtp: smtp.host
   smtpPort: 25
   user: user
   password: pass
   ssl: false
-
-address:
-  zuul: http://localhost:9080/
 
 serverid: LOCALHOST
 showalltasks: true
