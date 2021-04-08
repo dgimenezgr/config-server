@@ -44,18 +44,18 @@ hystrix:
                     enabled: false
                     
 # Eureka interface with Ribbon must be disabled so Ribbon will use the list of servers indicated below
-ribbon: 
-  ReadTimeout: 10000
-  eureka:
-    enabled: false
+# ribbon: 
+#   ReadTimeout: 10000
+#   eureka:
+#     enabled: false
 
 # Above is the list of servers and ports where the different instances of the service is deployed, so Ribbon can use them for load balancing
-authorities:
-  ribbon:
-    listOfServers: http://localhost:3340
-project-management:
-  ribbon:
-    listOfServers: http://localhost:8040
+# authorities:
+#   ribbon:
+# listOfServers: http://localhost:3340
+# project-management:
+#   ribbon:
+# listOfServers: http://localhost:8040
     
 app:
   serviceurl: http://localhost:8080/login/cas
