@@ -33,6 +33,7 @@ email:
   password: pass
   ssl: false
 
+usehttps: false
 serverid: LOCALHOST
 showalltasks: true
 snapshotallowed: true
