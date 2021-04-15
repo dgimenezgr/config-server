@@ -28,11 +28,12 @@ address:
 
 email:
   smtp: smtp.host
-  smtpPort: 25
+  smtpport: 25
   user: user
   password: pass
   ssl: false
 
+mindiskfreespacepercent: 10
 usehttps: false
 serverid: LOCALHOST
 showalltasks: true
