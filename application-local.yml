@@ -40,11 +40,14 @@ showalltasks: true
 snapshotallowed: true
 usehotandcold: true
 folders:
-  rootpath: E:/dreamgenics/dreampipe
-  homepath: E:/dreamgenics/dreampipe/jobs
-  coldpath: E:/dreamgenics/dreampipe/jobs_cold
-  pipepath: E:/dreamgenics/dreampipe/lib
-  datapath: E:/dreamgenics/data   
+  rootpath:  E:/dreamgenics/dreampipe
+  homepath:  E:/dreamgenics/dreampipe/jobs
+  coldpath:  E:/dreamgenics/dreampipe/jobs_cold
+  pipepath:  E:/dreamgenics/dreampipe/lib
+  datapath:  E:/dreamgenics/data
+  statepath: E:/dreamgenics/dreampipe/state
+  cfgpath:   E:/dreamgenics/dreampipe/cfg
+  inputpath: E:/dreamgenics/dreampipe/input
   tasktemppathsuffix: taskLoaderTempFolder
   relativeparentpaths: ../input,../param,.
 filechooser:
