@@ -27,9 +27,12 @@ zuul:
     authorities:
       serviceId: AUTHORITIES
       path: /authorities/**
-    project-management:
-      serviceId: PROJECT-MANAGEMENT
-      path: /project-management/**
+    dreampipe-test:
+      serviceId: DREAMPIPE-TEST
+      path: /dreampipe-test/**
+    dreampipe-jobs:
+      serviceId: DREAMPIPE-JOBS
+      path: /dreampipe-jobs/**
 
 # Lets zuuls ribbon get eureka's WS list
 eureka:
