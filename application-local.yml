@@ -32,7 +32,7 @@ email:
   user: user
   password: pass
   ssl: false
-  email: noreply@dreampipe.dreamgenics.com
+  emailaddress: noreply@dreampipe.dreamgenics.com
   fromname: DREAMpipe
 
 mindiskfreespacepercent: 10
@@ -42,15 +42,15 @@ showalltasks: true
 snapshotallowed: true
 usehotandcold: true
 folders:
-  rootpath:  E:/dreamgenics/dreampipe
-  homepath:  E:/dreamgenics/dreampipe/jobs
-  coldpath:  E:/dreamgenics/dreampipe/jobs_cold
-  pipepath:  E:/dreamgenics/dreampipe/lib
-  datapath:  E:/dreamgenics/data
+  rootpath: E:/dreamgenics/dreampipe
+  homepath: E:/dreamgenics/dreampipe/jobs
+  coldpath: E:/dreamgenics/dreampipe/jobs_cold
+  pipepath: E:/dreamgenics/dreampipe/lib
+  datapath: E:/dreamgenics/data
   statepath: E:/dreamgenics/dreampipe/state
-  cfgpath:   E:/dreamgenics/dreampipe/cfg
+  cfgpath: E:/dreamgenics/dreampipe/cfg
   inputpath: E:/dreamgenics/dreampipe/input
-  parapath:  E:/dreamgenics/dreampipe/param
+  parampath: E:/dreamgenics/dreampipe/param
   tasktemppathsuffix: taskLoaderTempFolder
   relativeparentpaths: ../input,../param,.
 filechooser:
